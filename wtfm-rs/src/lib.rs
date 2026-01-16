@@ -5,10 +5,11 @@
 //! ```
 //!
 
+/// ## This can be used by other crates.
+///
 /// `use wtfm_rs::add;`
 ///
 /// ```sh
-/// echo "This has been tested on MacOS"
 /// cargo new --lib --name wtfm-test /tmp/wtfm-test
 /// cd /tmp/wtfm-test && cargo add --git https://github.com/wtfm-rs/wtfm-rs.github.io  && cd -
 /// mkdir /tmp/wtfm-test/tests
@@ -23,7 +24,7 @@
 /// rm -rf /tmp/wtfm-test
 /// ```
 ///
-/// Output on my mac (`$PWD = ~/github/wtfm-rs/wtfm-rs.github.io`)
+/// Local test on my mac (`~/github/wtfm-rs/wtfm-rs.github.io`)
 /// ```sh
 /// This has been tested on MacOS
 ///    Creating library `wtfm-test` package
@@ -46,6 +47,10 @@
 ///
 /// ~/github/wtfm-rs/wtfm-rs.github.io
 /// ```
+///
+/// GitHub Action CI tests: 
+///
+/// <https://github.com/wtfm-rs/wtfm-rs-test>
 ///
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
