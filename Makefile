@@ -1,4 +1,4 @@
 all:
 	cargo update
 	cargo test
-	cargo doc
+	cargo doc --release --target-dir docs
