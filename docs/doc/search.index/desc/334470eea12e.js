@@ -1,0 +1,1 @@
+rd_("CoThis can be used by other crates <code>use wtfm_rs::add;</code>An<code>use wtfm_rs::add;</code>BfSee https://en.wikipedia.org/wiki/RTFM")
