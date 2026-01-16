@@ -1,4 +1,4 @@
-# wtfm-rs
+# [wtfm-rs](/doc/wtfm_rs/)
 
 
 ```rust
