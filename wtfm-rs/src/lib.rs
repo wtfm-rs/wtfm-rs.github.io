@@ -1,7 +1,7 @@
 //! See <https://en.wikipedia.org/wiki/RTFM>
 //!
 //! ```
-//! assert_eq!("RTFM".replace("R", "W"), "WTFM");
+//! assert_eq!("WTFM", "RTFM".replace("R", "W"));
 //! ```
 //!
 pub fn add(left: u64, right: u64) -> u64 {
