@@ -8,3 +8,9 @@ all:
 	rm -f docs/.rustc_info.json
 	rm -f docs/.rustdoc_fingerprint.json
 	rm -f docs/CACHEDIR.TAG
+
+test:
+	cargo fmt
+	cargo test 
+	cargo clean
+	

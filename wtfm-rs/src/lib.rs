@@ -49,7 +49,7 @@
 /// ~/github/wtfm-rs/wtfm-rs.github.io
 /// ```
 ///
-/// GitHub Action CI tests: 
+/// GitHub Action CI tests:
 ///
 /// <https://github.com/wtfm-rs/wtfm-rs-test>
 ///
