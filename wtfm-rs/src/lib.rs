@@ -1,3 +1,4 @@
+#![doc(html_playground_url = "https://play.rust-lang.org/")]
 //! See <https://en.wikipedia.org/wiki/RTFM>
 //!
 //! ```
