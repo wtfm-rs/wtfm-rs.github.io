@@ -4,7 +4,7 @@
 ///
 /// ```sh
 /// cargo new --lib --name wtfm-test /tmp/wtfm-test
-/// cd /tmp/wtfm-test && cargo add --git https://github.com/wtfm-rs/wtfm-rs.github.io  && cd -
+/// cd /tmp/wtfm-test && cargo add --git https://github.com/wtfm-rs/wtfm-rs.github.io wtfm-rs && cd -
 /// mkdir /tmp/wtfm-test/tests
 /// cat > /tmp/wtfm-test/tests/it-works <<EOF
 /// #[test]
