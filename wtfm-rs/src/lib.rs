@@ -1,11 +1,3 @@
-#![doc(html_playground_url = "https://play.rust-lang.org/")]
-//! See <https://en.wikipedia.org/wiki/RTFM>
-//!
-//! ```
-//! assert_eq!("WTFM", "RTFM".replace("R", "W"));
-//! ```
-//!
-
 /// ## This can be used by other crates.
 ///
 /// `use wtfm_rs::add;`
