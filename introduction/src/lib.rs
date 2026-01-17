@@ -15,6 +15,7 @@
 //! assert_eq!("WTFM", "RTFM".replace("R", "W"));
 //! ```
 //!
-//! Since the main source of the M in RTFM is from <https://doc.rust-lang.org/stable/std/index.html>,
-//! we can also learn to WTFM from it.
-//!
+//! Since the main source of the M in RTFM is from 
+//! <https://doc.rust-lang.org/stable/std/index.html>
+//! and <https://docs.rs>, we can also learn to WTFM from them.
+//! 
