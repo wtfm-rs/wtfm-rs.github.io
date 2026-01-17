@@ -19,16 +19,14 @@
 ///
 /// Local test on my mac (`~/github/wtfm-rs/wtfm-rs.github.io`)
 /// ```sh
-/// This has been tested on MacOS
 ///    Creating library `wtfm-test` package
 /// note: see more `Cargo.toml` keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-///    Updating git repository `https://github.com/wtfm-rs/wtfm-rs.github.io`
 ///    Updating git repository `https://github.com/wtfm-rs/wtfm-rs.github.io`
 ///      Adding wtfm-rs (git) to dependencies
 ///    Updating git repository `https://github.com/wtfm-rs/wtfm-rs.github.io`
 ///     Locking 1 package to latest Rust 1.92.0 compatible version
 /// ~/github/wtfm-rs/wtfm-rs.github.io
-///   Compiling wtfm-rs v0.1.0 (https://github.com/wtfm-rs/wtfm-rs.github.io#e9c6d190)
+///   Compiling wtfm-rs v0.1.0 (https://github.com/wtfm-rs/wtfm-rs.github.io#f02d438f)
 ///   Compiling wtfm-test v0.1.0 (/private/tmp/wtfm-test)
 ///    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.24s
 ///     Running unittests src/lib.rs (target/debug/deps/wtfm_test-c3f9b0c7c40b2943)
