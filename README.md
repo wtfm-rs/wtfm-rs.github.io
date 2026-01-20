@@ -44,6 +44,6 @@ edition = "2024"
 
 <https://wtfm-rs.github.io/wtfm-vec/doc/wtfm_vec>
 
-This is a [standalone crate](https://github.com/wtfm-rs/wtfm-rs/tree/main) instead of the one 
+This is a [standalone crate](https://github.com/wtfm-rs/wtfm-vec/tree/main) instead of the one 
 as the dependency of [introduction](https://github.com/wtfm-rs/wtfm-rs.github.io/tree/main/introduction).
 
