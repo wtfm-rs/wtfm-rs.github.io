@@ -4,7 +4,7 @@
 assert_eq!("WTFM", "RTFM".replace("R", "W"));
 ```
 
-[Cargo.toml](https://github.com/wtfm-rs/wtfm-rs.github.io/Cargo.toml)
+[Cargo.toml](https://github.com/wtfm-rs/wtfm-rs.github.io/blob/main/Cargo.toml)
 
 ```toml
 [workspace]
@@ -14,7 +14,7 @@ members = ["introduction"]
 
 ## Introduction
 
-[introdcution/Cargo.toml](https://github.com/wtfm-rs/wtfm-rs.github.io/introduction/Cargo.toml)
+[introdcution/Cargo.toml](https://github.com/wtfm-rs/wtfm-rs.github.io/blob/main/introduction/Cargo.toml)
 
 ```toml
 [package]
@@ -29,7 +29,7 @@ wtfm-vec = { git = "https://github.com/wtfm-rs/wtfm-vec", version = "0.1.0" }
 
 ## wtfm-vec
 
-[Cargo.toml](https://github.com/wtfm-rs/wtfm-vec)
+[Cargo.toml](https://github.com/wtfm-rs/blob/main/Cargo.toml)
 
 ```toml
 [package]
