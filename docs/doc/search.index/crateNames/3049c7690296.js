@@ -1,1 +1,0 @@
-rd_("lintroductiongwtfm_rshwtfm_vec")

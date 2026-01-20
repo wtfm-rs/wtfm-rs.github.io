@@ -5,11 +5,3 @@ version = 4
 [[package]]
 name = "introduction"
 version = "0.1.0"
-
-[[package]]
-name = "wtfm-rs"
-version = "0.1.0"
-
-[[package]]
-name = "wtfm-vec"
-version = "0.1.0"
