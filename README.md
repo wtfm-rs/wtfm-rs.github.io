@@ -27,6 +27,8 @@ wtfm-vec = { git = "https://github.com/wtfm-rs/wtfm-vec", version = "0.1.0" }
 ```
 <https://wtfm-rs.github.io/doc/introduction>
 
+<https://wtfm-rs.github.io/doc/wtfm-vec>
+
 ## wtfm-vec
 
 [Cargo.toml](https://github.com/wtfm-rs/blob/main/Cargo.toml)
@@ -42,7 +44,5 @@ edition = "2024"
 
 <https://wtfm-rs.github.io/wtfm-vec/doc/wtfm_vec>
 
-linked with
-
-<https://wtfm-rs.github.io/doc/introduction>
+(This is a standalone crate instead of the one linked to `introduction`.)
 
