@@ -4,13 +4,43 @@
 assert_eq!("WTFM", "RTFM".replace("R", "W"));
 ```
 
+rool [Cargo.toml](Cargo.toml)
+
+```toml
+[workspace]
+resolver = "3"
+members = ["introduction"]
+```
 ## Introduction
 
+local crate [introuction/Cargo.toml](introduction/Cargo.toml)
+`./introduction/Cargo.toml`
+
+```toml
+[package]
+name = "introduction"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wtfm-vec = { git = "https://github.com/wtfm-rs/wtfm-vec", version = "0.1.0" }
+```
 - <https://wtfm-rs.github.io/doc/introduction>
 
 ## wtfm-vec
 
-- <https://wtfm-rs.github.io/doc/wtfm_vec>
+```toml
+[package]
+name = "wtfm-vec"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+```
 
 - <https://wtfm-rs.github.io/wtfm-vec/doc/wtfm_vec>
+
+Included by and linked with `introduction` crate
+- <https://wtfm-rs.github.io/doc/wtfm_vec>
+- <https://wtfm-rs.github.io/doc/introduction>
 
