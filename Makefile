@@ -15,3 +15,5 @@ test:
 	cargo test 
 	cargo clean
 	
+install:
+	cargo add --git https://github.com/wtfm-rs/wtfm-vec wtfm-vec

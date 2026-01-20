@@ -5,3 +5,11 @@ version = 4
 [[package]]
 name = "introduction"
 version = "0.1.0"
+dependencies = [
+ "wtfm-vec",
+]
+
+[[package]]
+name = "wtfm-vec"
+version = "0.1.0"
+source = "git+https://github.com/wtfm-rs/wtfm-vec#39eb6f7317f5c2507a3884f7caf20b9161068293"
