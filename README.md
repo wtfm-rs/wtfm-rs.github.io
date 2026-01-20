@@ -25,7 +25,7 @@ edition = "2024"
 [dependencies]
 wtfm-vec = { git = "https://github.com/wtfm-rs/wtfm-vec", version = "0.1.0" }
 ```
-- <https://wtfm-rs.github.io/doc/introduction>
+<https://wtfm-rs.github.io/doc/introduction>
 
 ## wtfm-vec
 
@@ -40,9 +40,9 @@ edition = "2024"
 [dependencies]
 ```
 
-- <https://wtfm-rs.github.io/wtfm-vec/doc/wtfm_vec>
+<https://wtfm-rs.github.io/wtfm-vec/doc/wtfm_vec>
 
-Included by and linked with `introduction` crate
-- <https://wtfm-rs.github.io/doc/wtfm_vec>
-- <https://wtfm-rs.github.io/doc/introduction>
+linked with
+
+<https://wtfm-rs.github.io/doc/introduction>
 
