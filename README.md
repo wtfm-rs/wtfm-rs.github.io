@@ -27,7 +27,7 @@ wtfm-vec = { git = "https://github.com/wtfm-rs/wtfm-vec", version = "0.1.0" }
 ```
 <https://wtfm-rs.github.io/doc/introduction>
 
-<https://wtfm-rs.github.io/doc/wtfm-vec>
+<https://wtfm-rs.github.io/doc/wtfm_vec>
 
 ## wtfm-vec
 
@@ -44,5 +44,6 @@ edition = "2024"
 
 <https://wtfm-rs.github.io/wtfm-vec/doc/wtfm_vec>
 
-(This is a standalone crate instead of the one linked to `introduction`.)
+This is a [standalone crate](https://github.com/wtfm-rs/wtfm-rs/tree/main) instead of the one 
+as the dependency of [introduction](https://github.com/wtfm-rs/wtfm-rs.github.io/tree/main/introduction).
 
