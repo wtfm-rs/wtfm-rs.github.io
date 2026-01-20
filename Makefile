@@ -8,6 +8,7 @@ all:
 	rm -f docs/.rustc_info.json
 	rm -f docs/.rustdoc_fingerprint.json
 	rm -f docs/CACHEDIR.TAG
+	cp README.md docs
 
 test:
 	cargo fmt
