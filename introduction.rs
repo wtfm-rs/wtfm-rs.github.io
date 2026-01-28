@@ -58,3 +58,5 @@ fn assert_true() {
 fn assert_wtfm() {
     assert_eq!("WTFM", "RTFM".replace("R", "W"));
 }
+
+mod macro_expand;

@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Read tests after macro expansion"><title>macro_expand - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-ca0dd0c4.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="macro_expand" data-themes="" data-resource-suffix="" data-rustdoc-version="1.93.0 (254b59607 2026-01-19)" data-channel="1.93.0" data-search-js="search-9e2438ea.js" data-stringdex-js="stringdex-a3946164.js" data-settings-js="settings-c38705f0.js" ><script src="../static.files/storage-e2aeef58.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-a410ff4d.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-263c88ec.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar><h2><a href="#">Crate macro_expand</a></h2></rustdoc-topbar><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../macro_expand/index.html">macro_<wbr>expand</a></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#read-tests-after-macro-expansion" title="Read tests after macro expansion">Read tests after macro expansion</a></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>macro_<wbr>expand</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/macro_expand/macro_expand.rs.html#1-50">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="read-tests-after-macro-expansion"><a class="doc-anchor" href="#read-tests-after-macro-expansion">§</a>Read tests after macro expansion</h2>
+<p>Let’s have place holder tests in this crate:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="macro">assert!</span>(<span class="bool-val">true</span>);</code></pre></div><div class="example-wrap"><pre class="language-panic"><code>assert!(false, &quot;false wasn&#39;t true!&quot;);</code></pre></div>
+<p>We can run</p>
+<div class="example-wrap"><pre class="language-sh"><code>cargo expand --lib --tests</code></pre></div>
+<p>To view the whold crate (introduction) with all the macros expanded.</p>
+<div class="example-wrap"><pre class="language-sh"><code>#![feature(prelude_import)]
+# Introduction
+...
+#[rustc_main]
+#[coverage(off)]
+#[doc(hidden)]
+pub fn main() -&gt; () {
+   extern crate test;
+   test::test_main_static(
+       &amp;[
+           &amp;assert_true,
+           &amp;assert_wtfm,
+           &amp;macro_expand_assert_false,
+           &amp;macro_expand_assert_true,
+       ],
+   )
+}</code></pre></div>
+<p>This is going to be a great opportunity to dive in to the details.
+You can also confirm the output in GitHub Actions
+<a href="https://github.com/wtfm-rs/wtfm-rs.github.io/actions?query=branch%3Amain">https://github.com/wtfm-rs/wtfm-rs.github.io/actions?query=branch%3Amain</a></p>
+</div></details></section></div></main></body></html>
