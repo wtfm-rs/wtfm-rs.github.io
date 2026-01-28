@@ -1,7 +1,0 @@
-[package]
-name = "introduction"
-version = "0.1.0"
-edition = "2024"
-
-[dependencies]
-wtfm-vec = { git = "https://github.com/wtfm-rs/wtfm-vec", version = "0.1.0" }

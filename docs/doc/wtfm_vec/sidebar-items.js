@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["vec_extend","vec_push_pop"]};
