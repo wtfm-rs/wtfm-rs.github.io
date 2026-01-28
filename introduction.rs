@@ -19,7 +19,7 @@
 //! Since the main source of the M in RTFM is from
 //! <https://doc.rust-lang.org/stable/rustdoc/>
 //! we are going to use write test and docs only crates
-//! and run following commands
+//! and run following commands:
 //!
 //! ```sh
 //! rustdoc introduction.rs
@@ -44,6 +44,9 @@
 //!
 //! test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 //! ```
+//! You can also confirm the output of these tests in GitHub Actions
+//! <https://github.com/wtfm-rs/wtfm-rs.github.io/actions?query=branch%3Amain>
+//!
 
 #[cfg(test)]
 #[test]
