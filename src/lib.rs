@@ -16,7 +16,7 @@
 //! We can also learn about the throught process of other crates by "reviewing"
 //! them with our own doctests.
 //!
-//! # Professional Rustdoc 🐇🕳️
+//! # Professional rustdoc rabbit holes
 //! Be prepared to fall into rabbit holes of rustdoc and get out
 //! where and when you need to. This is a skill to be learned.
 //! We are programmers, not librarians.
