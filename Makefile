@@ -1,5 +1,6 @@
 publish:	
 	cargo doc
+	cargo test --doc
 	cp -r target/doc .
 
 review:

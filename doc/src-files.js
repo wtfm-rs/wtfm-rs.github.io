@@ -1,2 +1,2 @@
-createSrcSidebar('[["introduction",["",[],["introduction.rs"]]]]');
-//{"start":19,"fragment_lengths":[44]}
+createSrcSidebar('[["wtfm_rs",["",[],["lib.rs"]]]]');
+//{"start":19,"fragment_lengths":[30]}

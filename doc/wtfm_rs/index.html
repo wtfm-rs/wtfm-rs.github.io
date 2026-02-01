@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Introduction"><title>wtfm_rs - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../static.files/rustdoc-ca0dd0c4.css"><meta name="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="wtfm_rs" data-themes="" data-resource-suffix="" data-rustdoc-version="1.93.0 (254b59607 2026-01-19)" data-channel="1.93.0" data-search-js="search-9e2438ea.js" data-stringdex-js="stringdex-a3946164.js" data-settings-js="settings-c38705f0.js" ><script src="../static.files/storage-e2aeef58.js"></script><script defer src="../crates.js"></script><script defer src="../static.files/main-a410ff4d.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-263c88ec.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-044be391.svg"></head><body class="rustdoc mod crate"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar><h2><a href="#">Crate wtfm_rs</a></h2></rustdoc-topbar><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../wtfm_rs/index.html">wtfm_rs</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><ul class="block"><li><a id="all-types" href="all.html">All Items</a></li></ul><section id="rustdoc-toc"><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#introduction" title="Introduction">Introduction</a><ul><li><a href="#rabbit-holes-of-rustdoc" title="Rabbit holes of rustdoc">Rabbit holes of rustdoc</a></li><li><a href="#doctest" title="Doctest">Doctest</a></li><li><a href="#refactor-driven-development" title="Refactor driven development">Refactor driven development</a></li></ul></li></ul></section><div id="rustdoc-modnav"></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><section id="main-content" class="content"><div class="main-heading"><h1>Crate <span>wtfm_rs</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../src/wtfm_rs/lib.rs.html#1-58">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="introduction"><a class="doc-anchor" href="#introduction">§</a>Introduction</h2>
+<p>WTFM is a parody of <a href="https://en.wikipedia.org/wiki/RTFM">RTFM</a>,
+implemented in Rust.</p>
+<p>To learn something as broad and deep as Rust ecosystem,
+we might want to turn R into W, dive deep by writing our own
+<a href="https://doc.rust-lang.org/rustdoc/write-documentation/documentation-tests.html">doctests</a> iteratively until we find the solution to our problem.</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="macro">assert_eq!</span>(<span class="string">"WTFM"</span>, <span class="string">"RTFM"</span>.replace(<span class="string">"R"</span>, <span class="string">"W"</span>));</code></pre><a class="test-arrow" target="_blank" title="Run code" href="https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Afn+main()+%7B%0A++++assert_eq!(%22WTFM%22,+%22RTFM%22.replace(%22R%22,+%22W%22));%0A%7D&amp;edition=2024"></a></div>
+<p>Doctests can be a good “paper trail” of our thought process.</p>
+<p>We can also learn about the throught process of other crates by “reviewing”
+them with our own doctests.</p>
+<h3 id="rabbit-holes-of-rustdoc"><a class="doc-anchor" href="#rabbit-holes-of-rustdoc">§</a>Rabbit holes of rustdoc</h3>
+<p>Be prepared to fall into rabbit holes of rustdoc and get out
+where and when you need to. This is a skill to be learned.
+We are programmers, not librians.</p>
+<p><a href="https://rust-lang.github.io/api-guidelines/documentation.html">https://rust-lang.github.io/api-guidelines/documentation.html</a></p>
+<p><a href="https://github.com/sophiajt/rfcs/blob/front_page_styleguide/text/0000-api-doc-frontpage-styleguide.md">https://github.com/sophiajt/rfcs/blob/front_page_styleguide/text/0000-api-doc-frontpage-styleguide.md</a></p>
+<p><a href="https://github.com/rust-lang/rfcs/blob/master/text/1574-more-api-documentation-conventions.md">https://github.com/rust-lang/rfcs/blob/master/text/1574-more-api-documentation-conventions.md</a></p>
+<p><a href="https://github.com/rust-lang/rfcs/blob/master/text/0505-api-comment-conventions.md">https://github.com/rust-lang/rfcs/blob/master/text/0505-api-comment-conventions.md</a></p>
+<h3 id="doctest"><a class="doc-anchor" href="#doctest">§</a>Doctest</h3>
+<p>If <code>cargo test --doc</code> passed, we will have have output like</p>
+<div class="example-wrap"><pre class="language-text"><code>all doctests ran in 0.70s; merged doctests compilation took 0.33s</code></pre></div>
+<p>There is no need to check each one of them in playground but we can explore
+further by playwith them in the plalyground (that is why we call it playground.)</p>
+<p>Since doctests are merged and compiled into one binary, we want to make sure
+they don’t interfere with each other. Since doctests are not the real part
+of the code, we can have cleanup code in the libray body or unit test body.
+We can see how the source code progress this way.</p>
+<h3 id="refactor-driven-development"><a class="doc-anchor" href="#refactor-driven-development">§</a>Refactor driven development</h3>
+<p>Be prepared to <a href="https://doc.rust-lang.org/rustdoc/write-documentation/documentation-tests.html">RTFM</a>.</p>
+<h4 id="assert"><a class="doc-anchor" href="#assert">§</a>assert!</h4>
+<p>You can find the doc about them in <a href="https://doc.rust-lang.org/1.93.0/std/index.html" title="mod std">std</a>.</p>
+<p>Suppose we have a simple <code>assert_true</code> function that always passes:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">fn </span>assert_true() {
+    <span class="macro">assert!</span>(<span class="bool-val">true</span>);
+}
+assert_true();</code></pre><a class="test-arrow" target="_blank" title="Run code" href="https://play.rust-lang.org/?code=%23!%5Ballow(unused)%5D%0Afn+main()+%7B%0A++++fn+assert_true()+%7B%0A++++++++assert!(true);%0A++++%7D%0A++++assert_true();%0A%7D&amp;edition=2024"></a></div></div></details></section></div></main></body></html>
