@@ -131,13 +131,49 @@
 //!     Running `target/debug/examples/example-assert-true`
 //! true
 //! ```
+
+//! ## External crates
+//! Rustdoc is organized by crate and we can also bring external crates in
+//! via `Cargo.toml`
+//!
+//! ```toml
+//! [package]
+//! name = "wtfm-rs"
+//! version = "0.1.0"
+//! edition = "2024"
+//!
+//! [dependencies]
+//! wtfm-rs-hello-world = { git = "https://github.com/wtfm-rs/wtfm-rs.github.io", branch = "hello-world", version = "0.1.0" }
+//! ```
+//!
+//! In this case, we pull [wtfm_rs_hello_world] crate from
+//! <https://github.com/wtfm-rs/wtfm-rs.github.io/tree/hello-world>.
+//!
+//! We can use the function `hello_world()` from it
+//! ```text
+//! pub use wtfm_rs_hello_world::hello_world;
+//! ```
+//! and use it as `wtfm_rs::hello_world`.
+//!
+//! ```
+//! use wtfm_rs::hello_world;
+//! assert_eq!(hello_world(), "Hello, world!");
+//! ```
+//! (This will fail in playwright as before, but will pass `cargo test`
 //!
 pub fn is_true() -> bool {
     true
 }
 
+pub use wtfm_rs_hello_world::hello_world;
+
 #[cfg(test)]
 #[test]
 fn test_is_true() {
     assert!(is_true());
+}
+
+#[test]
+fn test_hello_world() {
+    assert_eq!(hello_world(), "Hello, world!");
 }

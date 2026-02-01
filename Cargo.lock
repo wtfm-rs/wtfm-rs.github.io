@@ -5,3 +5,11 @@ version = 4
 [[package]]
 name = "wtfm-rs"
 version = "0.1.0"
+dependencies = [
+ "wtfm-rs-hello-world",
+]
+
+[[package]]
+name = "wtfm-rs-hello-world"
+version = "0.1.0"
+source = "git+https://github.com/wtfm-rs/wtfm-rs.github.io?branch=hello-world#98fb5c7e23d03572ed70ed8c7b5e6544c93976c8"

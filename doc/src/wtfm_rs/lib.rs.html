@@ -131,14 +131,51 @@
 <a href=#131 id=131 data-nosnippet>131</a>//!     Running `target/debug/examples/example-assert-true`
 <a href=#132 id=132 data-nosnippet>132</a>//! true
 <a href=#133 id=133 data-nosnippet>133</a>//! ```
-<a href=#134 id=134 data-nosnippet>134</a>//!
-<a href=#135 id=135 data-nosnippet>135</a></span><span class="kw">pub fn </span>is_true() -&gt; bool {
-<a href=#136 id=136 data-nosnippet>136</a>    <span class="bool-val">true
-<a href=#137 id=137 data-nosnippet>137</a></span>}
-<a href=#138 id=138 data-nosnippet>138</a>
-<a href=#139 id=139 data-nosnippet>139</a><span class="attr">#[cfg(test)]
-<a href=#140 id=140 data-nosnippet>140</a>#[test]
-<a href=#141 id=141 data-nosnippet>141</a></span><span class="kw">fn </span>test_is_true() {
-<a href=#142 id=142 data-nosnippet>142</a>    <span class="macro">assert!</span>(is_true());
-<a href=#143 id=143 data-nosnippet>143</a>}
+<a href=#134 id=134 data-nosnippet>134</a>
+<a href=#135 id=135 data-nosnippet>135</a>//! ## External crates
+<a href=#136 id=136 data-nosnippet>136</a>//! Rustdoc is organized by crate and we can also bring external crates in
+<a href=#137 id=137 data-nosnippet>137</a>//! via `Cargo.toml`
+<a href=#138 id=138 data-nosnippet>138</a>//!
+<a href=#139 id=139 data-nosnippet>139</a>//! ```toml
+<a href=#140 id=140 data-nosnippet>140</a>//! [package]
+<a href=#141 id=141 data-nosnippet>141</a>//! name = "wtfm-rs"
+<a href=#142 id=142 data-nosnippet>142</a>//! version = "0.1.0"
+<a href=#143 id=143 data-nosnippet>143</a>//! edition = "2024"
+<a href=#144 id=144 data-nosnippet>144</a>//!
+<a href=#145 id=145 data-nosnippet>145</a>//! [dependencies]
+<a href=#146 id=146 data-nosnippet>146</a>//! wtfm-rs-hello-world = { git = "https://github.com/wtfm-rs/wtfm-rs.github.io", branch = "hello-world", version = "0.1.0" }
+<a href=#147 id=147 data-nosnippet>147</a>//! ```
+<a href=#148 id=148 data-nosnippet>148</a>//!
+<a href=#149 id=149 data-nosnippet>149</a>//! In this case, we pull [wtfm_rs_hello_world] crate from
+<a href=#150 id=150 data-nosnippet>150</a>//! &lt;https://github.com/wtfm-rs/wtfm-rs.github.io/tree/hello-world&gt;.
+<a href=#151 id=151 data-nosnippet>151</a>//!
+<a href=#152 id=152 data-nosnippet>152</a>//! We can use the function `hello_world()` from it 
+<a href=#153 id=153 data-nosnippet>153</a>//! ```text
+<a href=#154 id=154 data-nosnippet>154</a>//! pub use wtfm_rs_hello_world::hello_world;
+<a href=#155 id=155 data-nosnippet>155</a>//! ```
+<a href=#156 id=156 data-nosnippet>156</a>//! and use it as `wtfm_rs::hello_world`.
+<a href=#157 id=157 data-nosnippet>157</a>//!
+<a href=#158 id=158 data-nosnippet>158</a>//! (This will fail in playwright as before, but will pass `cargo test`
+<a href=#159 id=159 data-nosnippet>159</a>//! ```
+<a href=#160 id=160 data-nosnippet>160</a>//! use wtfm_rs::hello_world;
+<a href=#161 id=161 data-nosnippet>161</a>//! assert_eq!(hello_world(), "Hello, world!");
+<a href=#162 id=162 data-nosnippet>162</a>//! ```
+<a href=#163 id=163 data-nosnippet>163</a>//!
+<a href=#164 id=164 data-nosnippet>164</a>//!
+<a href=#165 id=165 data-nosnippet>165</a></span><span class="kw">pub fn </span>is_true() -&gt; bool {
+<a href=#166 id=166 data-nosnippet>166</a>    <span class="bool-val">true
+<a href=#167 id=167 data-nosnippet>167</a></span>}
+<a href=#168 id=168 data-nosnippet>168</a>
+<a href=#169 id=169 data-nosnippet>169</a><span class="kw">pub use </span>wtfm_rs_hello_world::hello_world;
+<a href=#170 id=170 data-nosnippet>170</a>
+<a href=#171 id=171 data-nosnippet>171</a><span class="attr">#[cfg(test)]
+<a href=#172 id=172 data-nosnippet>172</a>#[test]
+<a href=#173 id=173 data-nosnippet>173</a></span><span class="kw">fn </span>test_is_true() {
+<a href=#174 id=174 data-nosnippet>174</a>    <span class="macro">assert!</span>(is_true());
+<a href=#175 id=175 data-nosnippet>175</a>}
+<a href=#176 id=176 data-nosnippet>176</a>
+<a href=#177 id=177 data-nosnippet>177</a><span class="attr">#[test]
+<a href=#178 id=178 data-nosnippet>178</a></span><span class="kw">fn </span>test_hello_world() {
+<a href=#179 id=179 data-nosnippet>179</a>    <span class="macro">assert_eq!</span>(hello_world(), <span class="string">"Hello, world!"</span>);
+<a href=#180 id=180 data-nosnippet>180</a>}
 </code></pre></div></section></main></body></html>

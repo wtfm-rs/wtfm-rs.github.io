@@ -19,6 +19,7 @@ review:
 test:
 	cargo test
 	cargo run --example example-assert-true
+	cargo run --example example-hello-world
 
 clean:
 	cargo clean
