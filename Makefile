@@ -1,5 +1,4 @@
 all: 	check clippy fmt test doc
-	cp -r target/doc .
 
 check:
 	cargo check
@@ -18,8 +17,7 @@ review:
 
 test:
 	cargo test
-	cargo run --example example-assert-true
+	cargo run --example example-hello-world
 
 clean:
 	cargo clean
-	rm -rf doc

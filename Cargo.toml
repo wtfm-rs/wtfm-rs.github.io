@@ -1,5 +1,5 @@
 [package]
-name = "wtfm-rs"
+name = "wtfm-rs-hello-world"
 version = "0.1.0"
 edition = "2024"
 
