@@ -1,5 +1,5 @@
-use wtfm_rs::is_true;
+use wtfm_rs::return_true;
 fn main() {
-    assert!(is_true());
-    println!("{}", is_true());
+    assert!(return_true());
+    println!("{}", return_true());
 }

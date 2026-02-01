@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["hello_world","is_true"]};
+window.SIDEBAR_ITEMS = {"fn":["hello_world","return_true"]};
