@@ -1,0 +1,1 @@
+rd_("Acexample_assert_truegwtfm_rs")
