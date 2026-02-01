@@ -1,5 +1,9 @@
 publish:	
-	cargo clean
 	cargo doc
-	mv target/doc .
+	cp -r target/doc .
 
+review:
+	cargo doc --open
+
+clean:
+	cargo clean
