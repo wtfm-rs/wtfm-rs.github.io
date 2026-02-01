@@ -1,1 +1,0 @@
-rd_("dboolgis_truegwtfm_rsAcexample_assert_true")
