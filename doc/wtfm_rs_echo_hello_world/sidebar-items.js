@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["echo_hello_world"]};
+window.SIDEBAR_ITEMS = {"fn":["echo_hello_world","echo_hello_world_v2"]};

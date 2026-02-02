@@ -13,7 +13,7 @@ dependencies = [
 [[package]]
 name = "wtfm-rs-echo-hello-world"
 version = "0.1.0"
-source = "git+https://github.com/wtfm-rs/wtfm-rs.github.io?branch=echo-hello-world#9244775f40c50efb3126ca18387faffb0c0223c3"
+source = "git+https://github.com/wtfm-rs/wtfm-rs.github.io?branch=echo-hello-world#548ac1ebdee423dbddb8e0cf34494fccf034e939"
 
 [[package]]
 name = "wtfm-rs-hello-world"

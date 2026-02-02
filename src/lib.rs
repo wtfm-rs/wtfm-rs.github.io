@@ -303,12 +303,25 @@
 //! assert_eq!(hello_world, "Hello, world!\n");
 //! ```
 //! Much simpler and more idiomatic.
+//! We update [wtfm_rs_echo_hello_world] with a `echo_hello_world_v2`
+//!
+//! ```
+//! use wtfm_rs_echo_hello_world::echo_hello_world_v2;
+//! assert_eq!(echo_hello_world_v2(), "Hello, world!\n");
+//! ```
+//!
+//! ```
+//! use wtfm_rs::echo_hello_world_v2;
+//! assert_eq!(echo_hello_world_v2(), "Hello, world!\n");
+//! ```
+//!
 
 pub fn return_true() -> bool {
     true
 }
 
 pub use wtfm_rs_echo_hello_world::echo_hello_world;
+pub use wtfm_rs_echo_hello_world::echo_hello_world_v2;
 pub use wtfm_rs_hello_world::hello_world;
 
 #[cfg(test)]
@@ -325,4 +338,9 @@ fn test_hello_world() {
 #[test]
 fn test_echo_hello_world() {
     assert_eq!(echo_hello_world(), "Hello, world!\n");
+}
+
+#[test]
+fn test_echo_hello_world_v2() {
+    assert_eq!(echo_hello_world_v2(), "Hello, world!\n");
 }
