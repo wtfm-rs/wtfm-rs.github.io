@@ -1,0 +1,1 @@
+rd_("dboolfstringfwtfmrsjhelloworld0jreturntruenechohelloworld0AaexampleasserttrueAaexamplehelloworldA`wtfmrshelloworldAeexampleechohelloworldAdwtfmrsechohelloworld")

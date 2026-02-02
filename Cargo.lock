@@ -6,8 +6,14 @@ version = 4
 name = "wtfm-rs"
 version = "0.1.0"
 dependencies = [
+ "wtfm-rs-echo-hello-world",
  "wtfm-rs-hello-world",
 ]
+
+[[package]]
+name = "wtfm-rs-echo-hello-world"
+version = "0.1.0"
+source = "git+https://github.com/wtfm-rs/wtfm-rs.github.io?branch=echo-hello-world#9244775f40c50efb3126ca18387faffb0c0223c3"
 
 [[package]]
 name = "wtfm-rs-hello-world"

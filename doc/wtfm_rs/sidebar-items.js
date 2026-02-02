@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["hello_world","return_true"]};
+window.SIDEBAR_ITEMS = {"fn":["echo_hello_world","hello_world","return_true"]};

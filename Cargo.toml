@@ -5,3 +5,4 @@ edition = "2024"
 
 [dependencies]
 wtfm-rs-hello-world = { git = "https://github.com/wtfm-rs/wtfm-rs.github.io", branch = "hello-world", version = "0.1.0" }
+wtfm-rs-echo-hello-world = { git = "https://github.com/wtfm-rs/wtfm-rs.github.io", branch = "echo-hello-world", version = "0.1.0" }

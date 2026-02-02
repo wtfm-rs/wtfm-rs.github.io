@@ -28,7 +28,8 @@
 //! all doctests ran in 0.70s; merged doctests compilation took 0.33s
 //! ```
 //! There is no need to check each one of them in playground but we can explore
-//! further by playwith them in the plalyground (that is why we call it playground.)
+//! further by tinkering with them in the plalyground.
+//! (That is why we call it playground.)
 //!
 //! Since doctests are merged and compiled into one binary, we want to make sure
 //! they don't interfere with each other. Since doctests are not the real part
@@ -38,7 +39,7 @@
 //! # [assert!] driven development
 //! Be prepared to [RTFM](https://doc.rust-lang.org/rustdoc/write-documentation/documentation-tests.html) [std].
 //!
-//! Let's start with an extremely trivial rust program using
+//! Let's start with a trivial rust program using
 //! macro [assert!] and primitive [true].
 //! ```
 //! assert!(true);
@@ -182,11 +183,59 @@
 //! [String::from_utf8]
 //!
 //! [String::from_utf8_lossy]
+//!
+//! # Same code in three crates
+//!
+//! 1. We started it as doctest in this crate [`wtfm_rs`](./index.html).
+//! 2. We copy and paste it to an example crate
+//!    [`example_echo_hello_world`](../example_echo_hello_world/index.html).
+//!
+//! 3. We create an external crate [wtfm_rs_echo_hello_world]
+//!    in a [branch](https://github.com/wtfm-rs/wtfm-rs.github.io/tree/refs/heads/echo-hello-world) and pull it in with `Cargo.toml`.:
+//! ```text
+//! wtfm-rs-echo-hello-world = { git = "https://github.com/wtfm-rs/wtfm-rs.github.io", branch = "echo-hello-world", version = "0.1.0" }
+//! ```
+//! # Why do we do this?
+//! This allows us to explore with controlled dependenices.
+//! Doctests in a crate will not becoming the dependency of any crate so we are
+//! safe to modify and test out ideas.
+//! Same with example crates that allows us to add `fn main` but can only be
+//! called via `cargto run --example ...`.
+//!
+//! Once the code is "published" in [wtfm_rs_echo_hello_world],
+//! and became part of the dependency tree, it can be called by us
+//! (Rollowing code will not run in Playground becuase of scope.)
+//!
+//! ```
+//! use wtfm_rs_echo_hello_world::echo_hello_world;
+//! assert_eq!(echo_hello_world(), "Hello, world!\n");
+//! ```
+//!
+//! ```
+//! use wtfm_rs::echo_hello_world;
+//! assert_eq!(echo_hello_world(), "Hello, world!\n");
+//! ```
+//!
+//! ```text
+//! cargo tree
+//! wtfm-rs v0.1.0 (/Users/sam/github/wtfm-rs/wtfm-rs.github.io)
+//! ├── wtfm-rs-echo-hello-world v0.1.0 (https://github.com/wtfm-rs/wtfm-rs.github.io?branch=echo-hello-world#9244775f)
+//! └── wtfm-rs-hello-world v0.1.0 (https://github.com/wtfm-rs/wtfm-rs.github.io?branch=hello-world#98fb5c7e)
+//! ```
+//! By design, none of these WTFM crates should end up in production.
+//! They are "paper trails” of thought process.
+//! The purpose of reading, writing, and testing them is to force us to
+//! think and reason the choices we made in the context of rust toolchain,
+//! i.e., `cargo doc, cargo test, cargo run ...` .
+//!
+//! We are free to change our mind.
+//!
 
 pub fn return_true() -> bool {
     true
 }
 
+pub use wtfm_rs_echo_hello_world::echo_hello_world;
 pub use wtfm_rs_hello_world::hello_world;
 
 #[cfg(test)]
@@ -198,4 +247,9 @@ fn test_return_true() {
 #[test]
 fn test_hello_world() {
     assert_eq!(hello_world(), "Hello, world!");
+}
+
+#[test]
+fn test_echo_hello_world() {
+    assert_eq!(echo_hello_world(), "Hello, world!\n");
 }
