@@ -1,0 +1,1 @@
+rd_("lIntroductionCbGet the ouput from <code>echo Hello, world!</code>")

@@ -1,2 +1,2 @@
-window.ALL_CRATES = ["example_assert_true","example_hello_world","wtfm_rs","wtfm_rs_hello_world"];
-//{"start":21,"fragment_lengths":[21,22,10,22]}
+window.ALL_CRATES = ["example_assert_true","example_echo_hello_world","example_hello_world","wtfm_rs","wtfm_rs_hello_world"];
+//{"start":21,"fragment_lengths":[21,27,22,10,22]}

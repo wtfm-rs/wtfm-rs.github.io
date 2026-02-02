@@ -1,0 +1,1 @@
+rd_("dboolfStringgwtfm_rskhello_world0kreturn_trueAcexample_assert_trueAcexample_hello_worldAcwtfm_rs_hello_worldAhexample_echo_hello_world")

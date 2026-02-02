@@ -1,2 +1,2 @@
-createSrcSidebar('[["example_assert_true",["",[],["example-assert-true.rs"]]],["example_hello_world",["",[],["example-hello-world.rs"]]],["wtfm_rs",["",[],["lib.rs"]]],["wtfm_rs_hello_world",["",[],["lib.rs"]]]]');
-//{"start":19,"fragment_lengths":[58,59,31,43]}
+createSrcSidebar('[["example_assert_true",["",[],["example-assert-true.rs"]]],["example_echo_hello_world",["",[],["example-echo-hello-world.rs"]]],["example_hello_world",["",[],["example-hello-world.rs"]]],["wtfm_rs",["",[],["lib.rs"]]],["wtfm_rs_hello_world",["",[],["lib.rs"]]]]');
+//{"start":19,"fragment_lengths":[58,69,59,31,43]}

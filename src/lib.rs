@@ -10,7 +10,7 @@
 //! ```
 //! assert_eq!("WTFM", "RTFM".replace("R", "W"));
 //! ```
-//! Doctests can be a good "paper trail" of our thought process.
+//! Doctests can be good "paper trails" of our thought process.
 //!
 //! We can also learn about the throught process of other crates by "reviewing"
 //! them with our own doctests.
