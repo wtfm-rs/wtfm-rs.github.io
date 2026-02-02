@@ -176,7 +176,6 @@
 //! assert_eq!(format!("{}", output_1), "Hello, world!\n");
 //! let output_2 = String::from_utf8(output.stdout).expect("Format error");
 //! assert_eq!(format!("{}", output_2), "Hello, world!\n");
-//!
 //! ```
 //! [std::process::Command]
 //!
@@ -230,6 +229,66 @@
 //!
 //! We are free to change our mind.
 //!
+//! # Devil is in the details
+//! We have been distracted by the toolchain rabbit holes and it is time
+//! to get back to our main trail. Let's take a look at following code again.
+//! ```
+//! use std::process::Command;
+//! let output = Command::new("echo")
+//!        .arg("Hello,")
+//!        .arg("world!")
+//!        .output()
+//!        .expect("Failed to execute command");
+//! let output_1 = String::from_utf8_lossy(&output.stdout).to_string();
+//! assert_eq!(format!("{}", output_1), "Hello, world!\n");
+//! let output_2 = String::from_utf8(output.stdout).expect("Format error");
+//! assert_eq!(format!("{}", output_2), "Hello, world!\n");
+//! ```
+//! If we switch `output_1` and `output_2`, it won't compile
+//! ```compile_fail
+//! use std::process::Command;
+//! let output = Command::new("echo")
+//!        .arg("Hello,")
+//!        .arg("world!")
+//!        .output()
+//!        .expect("Failed to execute command");
+//! let output_2 = String::from_utf8(output.stdout).expect("Format error");
+//! assert_eq!(format!("{}", output_2), "Hello, world!\n");
+//! let output_1 = String::from_utf8_lossy(&output.stdout).to_string();
+//! assert_eq!(format!("{}", output_1), "Hello, world!\n");
+//! ```
+//! ```text
+//!  failures:
+//!
+//!  ---- src/lib.rs - (line 247) stdout ----
+//!  error[E0382]: borrow of moved value: `output.stdout`
+//!     --> src/lib.rs:256:40
+//!      |
+//!    9 | let output_2 = String::from_utf8(output.stdout).expect("Format error");
+//!      |                                  ------------- value moved here
+//!   10 | assert_eq!(format!("{}", output_2), "Hello, world!\n");
+//!   11 | let output_1 = String::from_utf8_lossy(&output.stdout).to_string();
+//!      |                                        ^^^^^^^^^^^^^^ value borrowed here after move
+//!      |
+//!      = note: move occurs because `output.stdout` has type `Vec<u8>`, which does not implement the `Copy` trait
+//!      = note: borrow occurs due to deref coercion to `[u8]`
+//!  note: deref defined here
+//!     --> /Users/sam/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:3584:5
+//!      |
+//! 3584 |     type Target = [T];
+//!      |     ^^^^^^^^^^^
+//!
+//!  error: aborting due to 1 previous error
+//!
+//!  For more information about this error, try `rustc --explain E0382`.
+//!  Couldn't compile the test.
+//!
+//!  failures:
+//!     src/lib.rs - (line 247)
+//! ```
+//! The error message is a great souce for RTFM so we won't 
+//! get into another rabbit hole here.
+//! ( [String::from_utf8] vs  [String::from_utf8_lossy])
 
 pub fn return_true() -> bool {
     true
