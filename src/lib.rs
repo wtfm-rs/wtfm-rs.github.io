@@ -1,7 +1,7 @@
 #![doc(html_playground_url = "https://play.rust-lang.org/")]
 //! # Introduction
 //!
-//! WTFM is a parody of <a href="https://en.wikipedia.org/wiki/RTFM">RTFM</a>,
+//! WTFM is based on <a href="https://en.wikipedia.org/wiki/RTFM">RTFM</a>,
 //! implemented in Rust.
 //!
 //! To master an ecosystem as broad and deep as Rust in a short period of time,
