@@ -163,6 +163,26 @@
 //! ```
 //! This will fail in playwright as before, but will pass `cargo test`.
 //!
+//! # Get the ouput from echo Hello, world!
+//! ```
+//! use std::process::Command;
+//! let output = Command::new("echo")
+//!        .arg("Hello,")
+//!        .arg("world!")
+//!        .output()
+//!        .expect("Failed to execute command");
+//! let output_1 = String::from_utf8_lossy(&output.stdout).to_string();
+//! assert_eq!(format!("{}", output_1), "Hello, world!\n");
+//! let output_2 = String::from_utf8(output.stdout).expect("Format error");
+//! assert_eq!(format!("{}", output_2), "Hello, world!\n");
+//!
+//! ```
+//! [std::process::Command]
+//!
+//! [String::from_utf8]
+//!
+//! [String::from_utf8_lossy]
+
 pub fn return_true() -> bool {
     true
 }

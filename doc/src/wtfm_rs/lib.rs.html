@@ -163,20 +163,40 @@
 <a href=#163 id=163 data-nosnippet>163</a>//! ```
 <a href=#164 id=164 data-nosnippet>164</a>//! This will fail in playwright as before, but will pass `cargo test`.
 <a href=#165 id=165 data-nosnippet>165</a>//!
-<a href=#166 id=166 data-nosnippet>166</a></span><span class="kw">pub fn </span>return_true() -&gt; bool {
-<a href=#167 id=167 data-nosnippet>167</a>    <span class="bool-val">true
-<a href=#168 id=168 data-nosnippet>168</a></span>}
-<a href=#169 id=169 data-nosnippet>169</a>
-<a href=#170 id=170 data-nosnippet>170</a><span class="kw">pub use </span>wtfm_rs_hello_world::hello_world;
-<a href=#171 id=171 data-nosnippet>171</a>
-<a href=#172 id=172 data-nosnippet>172</a><span class="attr">#[cfg(test)]
-<a href=#173 id=173 data-nosnippet>173</a>#[test]
-<a href=#174 id=174 data-nosnippet>174</a></span><span class="kw">fn </span>test_return_true() {
-<a href=#175 id=175 data-nosnippet>175</a>    <span class="macro">assert!</span>(return_true());
-<a href=#176 id=176 data-nosnippet>176</a>}
-<a href=#177 id=177 data-nosnippet>177</a>
-<a href=#178 id=178 data-nosnippet>178</a><span class="attr">#[test]
-<a href=#179 id=179 data-nosnippet>179</a></span><span class="kw">fn </span>test_hello_world() {
-<a href=#180 id=180 data-nosnippet>180</a>    <span class="macro">assert_eq!</span>(hello_world(), <span class="string">"Hello, world!"</span>);
-<a href=#181 id=181 data-nosnippet>181</a>}
+<a href=#166 id=166 data-nosnippet>166</a>//! # Get the ouput from echo Hello, world!
+<a href=#167 id=167 data-nosnippet>167</a>//! ```
+<a href=#168 id=168 data-nosnippet>168</a>//! use std::process::Command;
+<a href=#169 id=169 data-nosnippet>169</a>//! let output = Command::new("echo")
+<a href=#170 id=170 data-nosnippet>170</a>//!        .arg("Hello,")
+<a href=#171 id=171 data-nosnippet>171</a>//!        .arg("world!")
+<a href=#172 id=172 data-nosnippet>172</a>//!        .output()
+<a href=#173 id=173 data-nosnippet>173</a>//!        .expect("Failed to execute command");
+<a href=#174 id=174 data-nosnippet>174</a>//! let output_1 = String::from_utf8_lossy(&amp;output.stdout).to_string();
+<a href=#175 id=175 data-nosnippet>175</a>//! assert_eq!(format!("{}", output_1), "Hello, world!\n");
+<a href=#176 id=176 data-nosnippet>176</a>//! let output_2 = String::from_utf8(output.stdout).expect("Format error");
+<a href=#177 id=177 data-nosnippet>177</a>//! assert_eq!(format!("{}", output_2), "Hello, world!\n");
+<a href=#178 id=178 data-nosnippet>178</a>//!
+<a href=#179 id=179 data-nosnippet>179</a>//! ```
+<a href=#180 id=180 data-nosnippet>180</a>//! [std::process::Command]
+<a href=#181 id=181 data-nosnippet>181</a>//!
+<a href=#182 id=182 data-nosnippet>182</a>//! [String::from_utf8]
+<a href=#183 id=183 data-nosnippet>183</a>//!
+<a href=#184 id=184 data-nosnippet>184</a>//! [String::from_utf8_lossy]
+<a href=#185 id=185 data-nosnippet>185</a>
+<a href=#186 id=186 data-nosnippet>186</a></span><span class="kw">pub fn </span>return_true() -&gt; bool {
+<a href=#187 id=187 data-nosnippet>187</a>    <span class="bool-val">true
+<a href=#188 id=188 data-nosnippet>188</a></span>}
+<a href=#189 id=189 data-nosnippet>189</a>
+<a href=#190 id=190 data-nosnippet>190</a><span class="kw">pub use </span>wtfm_rs_hello_world::hello_world;
+<a href=#191 id=191 data-nosnippet>191</a>
+<a href=#192 id=192 data-nosnippet>192</a><span class="attr">#[cfg(test)]
+<a href=#193 id=193 data-nosnippet>193</a>#[test]
+<a href=#194 id=194 data-nosnippet>194</a></span><span class="kw">fn </span>test_return_true() {
+<a href=#195 id=195 data-nosnippet>195</a>    <span class="macro">assert!</span>(return_true());
+<a href=#196 id=196 data-nosnippet>196</a>}
+<a href=#197 id=197 data-nosnippet>197</a>
+<a href=#198 id=198 data-nosnippet>198</a><span class="attr">#[test]
+<a href=#199 id=199 data-nosnippet>199</a></span><span class="kw">fn </span>test_hello_world() {
+<a href=#200 id=200 data-nosnippet>200</a>    <span class="macro">assert_eq!</span>(hello_world(), <span class="string">"Hello, world!"</span>);
+<a href=#201 id=201 data-nosnippet>201</a>}
 </code></pre></div></section></main></body></html>

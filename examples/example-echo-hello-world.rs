@@ -1,8 +1,6 @@
 #![doc(html_playground_url = "https://play.rust-lang.org/")]
 //! # Get the ouput from `echo Hello, world!`
 //!
-//! [std::process::Command]
-//!
 //! ```
 //! use std::process::Command;
 //! let output = Command::new("echo")
@@ -10,10 +8,18 @@
 //!        .arg("world!")
 //!        .output()
 //!        .expect("Failed to execute command");
-//! let output = String::from_utf8(output.stdout).expect("Format error");
-//! assert_eq!(format!("{}", output), "Hello, world!\n");
+//! let output_1 = String::from_utf8_lossy(&output.stdout).to_string();
+//! assert_eq!(format!("{}", output_1), "Hello, world!\n");
+//! let output_2 = String::from_utf8(output.stdout).expect("Format error");
+//! assert_eq!(format!("{}", output_2), "Hello, world!\n");
 //!
 //! ```
+//! [std::process::Command]
+//!
+//! [String::from_utf8]
+//!
+//! [String::from_utf8_lossy]
+
 use std::process::Command;
 
 fn echo_hello_world() -> String {
