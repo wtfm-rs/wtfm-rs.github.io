@@ -289,6 +289,20 @@
 //! The error message is a great souce for RTFM so we won't
 //! get into another rabbit hole here.
 //! ( [String::from_utf8] vs  [String::from_utf8_lossy])
+//!
+//! After RTFM, we might want to use [str::from_utf8]:
+//! ```
+//! use std::process::Command;
+//! let output = Command::new("echo")
+//!        .arg("Hello,")
+//!        .arg("world!")
+//!        .output()
+//!        .expect("Failed to execute command");
+//! let stdout = &output.stdout;
+//! let hello_world = str::from_utf8(stdout).expect("Format error");
+//! assert_eq!(hello_world, "Hello, world!\n");
+//! ```
+//! Much simpler and more idiomatic.
 
 pub fn return_true() -> bool {
     true
