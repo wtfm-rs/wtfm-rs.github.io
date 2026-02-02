@@ -286,7 +286,7 @@
 //!  failures:
 //!     src/lib.rs - (line 247)
 //! ```
-//! The error message is a great souce for RTFM so we won't 
+//! The error message is a great souce for RTFM so we won't
 //! get into another rabbit hole here.
 //! ( [String::from_utf8] vs  [String::from_utf8_lossy])
 
