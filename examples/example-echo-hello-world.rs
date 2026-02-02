@@ -22,13 +22,17 @@
 
 use std::process::Command;
 
-pub fn echo_hello_world() -> String {
+fn echo_hello_world() -> String {
     let output = Command::new("echo")
         .arg("Hello,")
         .arg("world!")
         .output()
         .expect("Failed to execute command");
     String::from_utf8(output.stdout).expect("Format error")
+}
+
+fn main() {
+    println!("{}", echo_hello_world());
 }
 
 #[cfg(test)]

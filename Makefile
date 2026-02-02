@@ -17,7 +17,7 @@ review:
 
 test:
 	cargo test
-	cargo run --example example-hello-world
+	cargo run --example example-echo-hello-world
 
 clean:
 	cargo clean
